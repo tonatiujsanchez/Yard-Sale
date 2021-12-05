@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --font-sm: 14px;
+            --font-md: 16px;
+            --font-lg: 19px;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            display: grid;
+            height: 100vh;
+            place-content: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-size: var(--font-sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--font-md);
+            padding: 8px;
+            margin-bottom: 24px;
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            font-weight: bold;
+            height: 56px;
+            width: 100%;
+            font-size: var(--font-md);
+            cursor: pointer;
+        }
+        .login-button{
+            margin-top: 16px;
+            margin-bottom: 32px;
+        }
+        .form .forgot{
+            color: var(--hospital-green);
+            text-decoration: none;
+            font-size: var(--font-sm);
+            text-align: center;
+            margin-bottom: 132px;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            border: none;
+            border-radius: 8px;
+            color: var(--hospital-green);
+            font-weight: bold;
+            height: 56px;
+            width: 100%;
+            font-size: var(--font-md);
+            cursor: pointer;
+            border: 1px solid var(--hospital-green);
+        }
+        @media (min-width: 640px) {
+            .logo{
+                display: none;
+            }
+            .form .forgot{
+                margin-bottom: 64px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="login">
+        <div class="form-container">
+            <img src="./assets/logos/logo_yard_sale.svg" alt="Logo Yard Sale" class="logo">
+
+            <form action="/" class="form">
+                <label for="email" class="label">Email address</label>
+                <input type="text" id="email" placeholder="ejemplo@email.com" class="input input-email">
+
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="********" class="input input-password">
+            
+                <input type="submit" value="Log in" class="primary-button login-button">
+                <a href="/" class="forgot">Forgot my password</a>
+            </form>
+            <button class="secondary-button signup-button">Sign up</button>
+        </div>
+    </section>
+</body>
+</html>
