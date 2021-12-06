@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --font-sm: 14px;
+            --font-md: 16px;
+            --font-lg: 19px;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            font-weight: bold;
+            height: 56px;
+            width: 100%;
+            font-size: var(--font-md);
+            cursor: pointer;
+        }
+        .title{
+            font-size: var(--font-lg);
+            margin-bottom: 40px;
+        }
+        .title .arrow-icon{
+            transform: rotate(180deg);
+            margin-right: 16px;
+        }
+        .product-detail{
+            max-width: 100%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 16px;
+        }
+        .my-order-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--text-input-field);
+            padding: 24px 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+        .my-order-content p{
+            font-weight: bold;
+            font-size: var(--font-md);
+            margin: 0;
+        }
+        .shopping-container{
+            margin-bottom: 64px;
+        }
+        .shopping-card figure{
+            margin: 0;
+        }
+        .shopping-card figure img{
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            object-fit: cover;
+            object-position: bottom right; 
+        }
+
+        .shopping-card{
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .shopping-card p{
+            margin: 0;
+        }
+        .shopping-card p:nth-child(2){
+            color: var(--very-light-pink);
+            font-size: var(--font-sm);
+        }
+        .shopping-card p:nth-child(3){
+            font-weight: bold;
+        }
+        @media (min-width: 540px) {
+            .product-detail{
+                max-width: 360px;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+                margin-right: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <h1 class="title">
+            <img src="./assets/icons/flechita.svg" alt="Arrow icon" class="arrow-icon">
+            Shopping cart
+        </h1>
+        <div class="shopping-container">
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=300" alt="Product" class="product-image">
+                </figure>
+                <p>Bike Black</p>
+                <p>$60,00</p>
+                <img src="./assets/icons/icon_close.png" alt="Arrow icon" class="arrow">
+            </div>
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://images.pexels.com/photos/2130611/pexels-photo-2130611.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Product" class="product-image">
+                </figure>
+                <p>Bike Blue</p>
+                <p>$60,00</p>
+                <img src="./assets/icons/icon_close.png" alt="Arrow icon" class="arrow">
+            </div>
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=300" alt="Product" class="product-image">
+                </figure>
+                <p>Bike Black</p>
+                <p>$60,00</p>
+                <img src="./assets/icons/icon_close.png" alt="Arrow icon" class="arrow">
+            </div>
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://images.pexels.com/photos/2130611/pexels-photo-2130611.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Product" class="product-image">
+                </figure>
+                <p>Bike Blue</p>
+                <p>$60,00</p>
+                <img src="./assets/icons/icon_close.png" alt="Arrow icon" class="arrow">
+            </div>
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=300" alt="Product" class="product-image">
+                </figure>
+                <p>Bike Black</p>
+                <p>$60,00</p>
+                <img src="./assets/icons/icon_close.png" alt="Arrow icon" class="arrow">
+            </div>
+        </div>
+
+        <div class="my-order-content">
+            <p>Total</p>
+            <p>$560.00</p>
+        </div>
+
+        <button class="primary-button add-cart-button">
+            Checkout
+        </button>
+    </aside>
+</body>
+</html>

@@ -32,6 +32,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, 140px);
             gap: 24px;
+            place-content: center;
         }
         .product-card{
             width: 140px;
@@ -47,6 +48,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 12px;
         }
         .product-info figure{
             margin: 0;
@@ -58,11 +60,18 @@
         .product-info div p{
             font-weight: bold;
             font-size: var(--font-sm);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info div p:nth-child(2){
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+            font-weight: normal;
         }
         @media ( min-width: 640px ) {
             .cards-container{
                 grid-template-columns: repeat(auto-fill, 240px);
-                gap: 24px;
+                gap: 32px;
             }
             .product-card{
                 width: 240px;
